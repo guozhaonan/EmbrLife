@@ -7,18 +7,20 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-   devise_parameter_sanitizer.for(:sign_up) << :first_name
-   devise_parameter_sanitizer.for(:account_update) << :first_name
-   devise_parameter_sanitizer.for(:sign_up) << :last_name
-   devise_parameter_sanitizer.for(:account_update) << :last_name
-   devise_parameter_sanitizer.for(:sign_up) << :college
-   devise_parameter_sanitizer.for(:account_update) << :college
-   devise_parameter_sanitizer.for(:sign_up) << :bio
-   devise_parameter_sanitizer.for(:account_update) << :bio
-   devise_parameter_sanitizer.for(:sign_up) << :values
-   devise_parameter_sanitizer.for(:account_update) << :values
-   devise_parameter_sanitizer.for(:sign_up) << :interests
-   devise_parameter_sanitizer.for(:account_update) << :interests
+    devise_parameter_sanitizer.for(:sign_up) << :username
+    devise_parameter_sanitizer.for(:account_update) << :username   
+    devise_parameter_sanitizer.for(:sign_up) << :first_name
+    devise_parameter_sanitizer.for(:account_update) << :first_name
+    devise_parameter_sanitizer.for(:sign_up) << :last_name
+    devise_parameter_sanitizer.for(:account_update) << :last_name
+    devise_parameter_sanitizer.for(:sign_up) << :college
+    devise_parameter_sanitizer.for(:account_update) << :college
+    devise_parameter_sanitizer.for(:sign_up) << :bio
+    devise_parameter_sanitizer.for(:account_update) << :bio
+    devise_parameter_sanitizer.for(:sign_up) << :values
+    devise_parameter_sanitizer.for(:account_update) << :values
+    devise_parameter_sanitizer.for(:sign_up) << :interests
+    devise_parameter_sanitizer.for(:account_update) << :interests
 
 
   end
