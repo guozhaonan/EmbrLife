@@ -5,6 +5,7 @@
       <div class="page-header">
         <%= link_to idea.name, idea %>
         <%= idea.tagline %>
+        <%= image_tag idea.image %>
         <% if idea.user %>
           <%= idea.user.email %>
         <% end %>
