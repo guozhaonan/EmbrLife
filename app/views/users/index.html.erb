@@ -1,0 +1,11 @@
+<h1>Here's the profile page!</h1>
+<% @users.each do |user| %>
+<div class =  "bg-info col-md-8 col-md-offset-2" style = "margin-top: 10px;">
+  <div class="page-header">
+    <%= link_to (user.first_name+" "+user.last_name), user_path(user.username) %>
+    <%= image_tag user.image %>
+    <%= user.email %>
+    <%= user.bio %>
+  </div>
+</div>
+<% end %>
