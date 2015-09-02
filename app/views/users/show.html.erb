@@ -1,5 +1,13 @@
-<h1><%= @user.first_name %> <%= @user.last_name %></h1>
-<%= image_tag @user.image.url(:medium) %>
-<%= @user.college %>
-<%= @user.bio %>
-<%= @user.values %>
+<h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+
+<%= image_tag current_user.image.url(:medium) %>
+
+<p><%= current_user.bio %></p>
+
+<p><%= current_user.values %></p>
+
+<p><%= current_user.interests %></p>
+
+<p><%= current_user.college %></p>
+
+<p><%= current_user.email %></p>
