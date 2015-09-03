@@ -1,14 +1,15 @@
 <div class="jumbotron center">
      <h1>Welcome to my app!</h1>
      <% if user_signed_in? %>
-          <%= link_to "Browse for Ideas", ideas_path %>
+          <p> <%= link_to "Browse for Ideas", ideas_path %></p> or 
+          <p> <%= link_to "Browse for People", users_path %></p>
      <% else %>
        <p>
          <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
        </p>
        <p>or</p>
-       <p> <%= link_to "Browse for Ideas", ideas_path %>
-       </p>
+       <p> <%= link_to "Browse for Ideas", ideas_path %></p> or
+       <p> <%= link_to "Browse for People", users_path %></p>
        <% end %>
 </div>
