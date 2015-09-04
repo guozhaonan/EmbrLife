@@ -1,17 +1,18 @@
 <body class = "bk">
-<div class="trans center" id = "welcome">
-     <h1 class="center" id="wel">Welcome to IdeaDeck</h1>
-     <% if user_signed_in? %>
-          <p> <%= link_to "Browse for Ideas", ideas_path %></p> or
-          <p> <%= link_to "Browse for People", users_path %></p>
-     <% else %>
-       <p><%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %></p>
-       <p><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>   </p>
+<div class = "content">
+  <div id = "welcome" class="trans">
+       <h1 class="center" id="wel">Welcome to IdeaDeck</h1>
+       <% if user_signed_in? %>
+            <p> <%= link_to "Browse for Ideas", ideas_path %></p> or
+            <p> <%= link_to "Browse for People", users_path %></p>
+       <% else %>
+         <p class = "center"><%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>   </p>
 
 
-       <p> <%= link_to "Browse for Ideas", ideas_path %></p>
-       <p>or</p>
-       <p> <%= link_to "Browse for People", users_path %></p>
-       <% end %>
+         <p class = "center"> <%= link_to "Browse for Ideas", ideas_path %></p>
+         <p class = "center">or</p>
+         <p class = "center"> <%= link_to "Browse for People", users_path %></p>
+         <% end %>
+  </div>
 </div>
 </body>
