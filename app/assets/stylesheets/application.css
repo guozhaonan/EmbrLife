@@ -13,9 +13,4 @@
  *= require_tree .
  *= require_self
  */
- .bk2{
-   background-image:url(Desk.jpeg);
- }
- .debug{
-   border: 1px dotted green;
- }
+ 

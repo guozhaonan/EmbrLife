@@ -6,11 +6,48 @@
 .ttp{
   color: #E9F1DF;
 }
+.bk {
+  background-image:url(mac.jpeg);
+  background-size: 100% auto;
+  width: auto;
+  background-repeat: no-repeat;
+}
 .bk2{
   background-image:url(Desk.jpeg);
   background-size: 100% auto;
   width: auto;
+  background-repeat: no-repeat;
 }
 .debug{
   border: 1px dashed blue;
+}
+#welcome{
+  display: inline-block;
+  width: 600px;
+  padding: 25px;
+  border-radius: 10px;
+}
+.center{
+  //border: 1px dashed blue;
+  text-align: center;
+}
+.trans{
+  background-color: rgba(255,255,255,.8)
+}
+.trans2{
+  background-color:rgba(255,255,255,.3);
+}
+.content{
+  //border: 1px dashed red;
+  margin: auto;
+  height: auto;
+  width: 1200px;
+  padding-left: 300px;
+  padding-top: 100px;
+}
+.bt{
+  display: inline-block;
+}
+.debug{
+  border: 1px dashed red;
 }
