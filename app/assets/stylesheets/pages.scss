@@ -6,6 +6,11 @@
   background-size: 100% auto;
   width: auto;
 }
+.bk2{
+  background-image:url(Desk.jpeg);
+  background-size: 100% auto;
+  width: auto;
+}
 #welcome{
   display: inline-block;
   width: 600px;
@@ -32,4 +37,7 @@
 }
 .bt{
   display: inline-block;
+}
+.debug{
+  border: 1px dashed red;
 }

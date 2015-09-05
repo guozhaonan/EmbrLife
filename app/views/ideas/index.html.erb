@@ -1,19 +1,28 @@
-<h1>Listing Ideas</h1>
-<%= link_to 'New Idea', new_idea_path %>
-    <% @ideas.each do |idea| %>
-    <div class =  "bg-info col-md-8 col-md-offset-2" style = "margin-top: 10px;">
-      <div class="page-header">
-        <%= link_to idea.name, idea %>
-        <%= idea.tagline %>
-        <%= image_tag idea.image %>
-        <% if idea.user %>
-          <%= idea.user.email %>
+<div class = "container">
+    <h1>Listing Ideas</h1>
+    <h3 style = "clear: left"><%= link_to 'New Idea', new_idea_path %></h3>
+        <% @ideas.each do |idea| %>
+        <div style="margin:auto;width=40%;height:100%;">
+          <div style="margin:auto;margin-top:10px;margin-bot:10px;width:600px;background-color:#F5A503;float:left;clear:left;">
+            <div style="padding-right:20px;">
+            <%= image_tag idea.image(:thumb) %>
+            <%= link_to idea.name, idea %>
+            <%= idea.tagline %>
+            <% if idea.user %>
+              <%= idea.user.email %>
+            <% end %>
+            <%= idea.description %>
+            <% if idea.user == current_user %>
+              <%= link_to 'Edit', edit_idea_path(idea) %> |
+              <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
+          </div>
+        </div>
         <% end %>
-        <%= idea.description %>
-        <% if idea.user == current_user %>
-          <%= link_to 'Edit', edit_idea_path(idea) %>
-          <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-      </div>
+  </div>
+</div>
+  <div class="bk2" style="width:1676px;height:1000px;position:fixed;top:0px;margin:auto;z-index:-1;">
+    <div class = "trans2" style = "width:auto;height:1000px;background-color:rgba(255,255,255,.5);">
     </div>
-    <% end %>
+  </div>
