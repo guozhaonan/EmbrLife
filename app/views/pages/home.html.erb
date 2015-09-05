@@ -1,28 +1,29 @@
-<div class = "content"style="margin-top:100px;">
-  <div id = "welcome" class="trans">
-       <h1 class="center" id="wel">Welcome to IdeaDeck</h1>
+<div>
+  <div id = "welcome" class="trans8">
+       <h1 class="center">Welcome to IdeaDeck</h1>
        <% if user_signed_in? %>
             <p class = "center"> <%= link_to "Browse for Ideas", ideas_path %></p>
             <p class = "center">or</p>
             <p class = "center"> <%= link_to "Browse for People", users_path %></p>
        <% else %>
-         <p class = "center"><%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>   </p>
+         <p class = "center"><%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
          <p class = "center"> <%= link_to "Browse for Ideas", ideas_path %></p>
          <p class = "center">or</p>
          <p class = "center"> <%= link_to "Browse for People", users_path %></p>
          <% end %>
   </div>
 </div>
-<div style="width:100%;height:300px;float:right;display:inline-block;">
+
+<div  class = "section" style="background-color:#F5A503;">
 
 </div>
-<div style="width:100%;height:300px;float:right;display:inline-block;background-color:#F5A503;">
+
+<div class = "section" style="height:800px;">
 
 </div>
-<div style="width:100%;height:800px;float:right;display:inline-block;">
 
-</div>
-<div class = "bk" style="width:100%;height:1000px;position:fixed;top:0px;clear:left;z-index:-1;">
-  <div class = "trans2" style="width:100%;height:100%;)">
+<!--background image-->
+<div class = "bk">
+  <div class = "trans3" style="width:100%;height:100%;">
   </div>
 </div>

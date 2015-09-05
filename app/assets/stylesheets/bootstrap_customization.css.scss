@@ -1,53 +1,59 @@
 @import "bootstrap";
-.bdc{
-  border: 0px;
-  background-color: transparent
-}
-.ttp{
-  color: #E9F1DF;
-}
-.bk {
-  background-image:url(mac.jpeg);
-  background-size: 100% auto;
-  width: auto;
-  background-repeat: no-repeat;
-}
-.bk2{
-  background-image:url(Desk.jpeg);
-  background-size: 100% auto;
-  width: auto;
-  background-repeat: no-repeat;
-}
-.debug{
-  border: 1px dashed blue;
-}
 #welcome{
-  display: inline-block;
   width: 600px;
   padding: 25px;
   border-radius: 10px;
+  margin:100px auto 450px;
+}
+.bk {
+  background-image:url(mac.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:fixed;
+  top:0px;
+  z-index:-1;
+  height: 100%;
+  width: 100%;
+}
+.bk2{
+  background-image:url(Desk.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:fixed;
+  top:0px;
+  z-index:-1;
+  height: 100%;
+  width: 100%;
 }
 .center{
-  //border: 1px dashed blue;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
-.trans{
-  background-color: rgba(255,255,255,.8)
+.section{
+  width:100%;
+  height:200px;
+  float:right;
+  display:inline-block;
 }
-.trans2{
+.trans0{
+  background-color: transparent;
+  border:0px;
+}
+.trans3{
   background-color:rgba(255,255,255,.3);
 }
-.content{
-  //border: 1px dashed red;
-  margin: auto;
-  height: auto;
-  width: 1200px;
-  padding-left: 300px;
-  padding-top: 100px;
+.trans6{
+  background-color: rgba(255,255,255,.6)
 }
-.bt{
-  display: inline-block;
+.trans8{
+  background-color: rgba(255,255,255,.8)
 }
 .debug{
   border: 1px dashed red;
+}
+h1{
+  padding: 10px;
+  background-color: #F5A503;
+  color: #E9F1DF;
 }
