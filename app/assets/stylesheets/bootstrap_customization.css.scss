@@ -45,6 +45,19 @@
   height: 100%;
   width: 100%;
 }
+.bk4{
+  background-image:url(Notebook.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:fixed;
+  top:0px;
+  z-index:-1;
+  height: 100%;
+  width: 100%;
+}
+.br{
+  border-radius: 2px;
+}
 .browsebtn{
   width: 50%;
   height: 50px;
@@ -73,15 +86,21 @@
   margin-right: auto;
 
 }
+.checkbox{
+  border-style: none;
+  clear: none;
+  float: left;
+  margin-bottom: 10px;
+}
+.field{
+  display: inline-block;
+}
 .form{
-  width: 300px;
+  width: 400px;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 20%;
   clear: both;
-  border-radius: 10px;
-  padding: 30px;
   z-index: -9;
-  background-color: rgba(233,241,233,1);
 }
 .red{
   color: rgba(242,56,90,.9);
@@ -92,9 +111,46 @@
   float:right;
   display:inline-block;
 }
+.submit{
+  background-color: rgba(54, 177, 191, 1);
+  color: rgba(233, 241, 233, 1);
+  width: 100%;
+  height: 47px;
+  border-style: none;
+  font-size: 18px
+}
 .textbox{
-  height: 50px;
-  width: 200px;
+  display: block;
+  margin: 0px;
+  margin-bottom: 10px;
+  width: 370px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+
+  border-bottom: solid 2px #969696;
+}
+.textbox:focus{
+  outline: none;
 }
 .trans0{
   background-color: transparent;
@@ -117,8 +173,4 @@ h1{
   padding: 10px;
   background-color: rgba(245,165,3,.8);
   color: #E9F1DF;
-}
-body{
-  background-color:rgba(74,217,217,1);
-  z-index: -10;
 }
