@@ -13,20 +13,27 @@
   <% end %>
 
   <div class="field">
+    <h3 class="formheading">Idea Name</h3>
     <%= f.text_field :name , :class => 'textbox', :placeholder => 'Idea Name'%>
   </div>
   <div class="form-group">
-    <%= f.label :image %>
+    <h3 class="formheading">Image</h3>
     <%= f.file_field :image, class: "form-control"%>
   </div>
   <div class="field">
+    <h3 class="formheading">Tagline<h3>
+    <h3 class="formdescription">Put a one line descrpition of your idea here. This will be one of the first things other people will see when finding your idea.<h3>
     <%= f.text_field :tagline, :class => 'textbox', :placeholder => 'Tagline'%>
   </div>
   <div class="field">
-    <%= f.text_field :description , :class => 'textbox', :placeholder => 'Description'%>
+    <h3 class="formheading">Description<h3>
+    <p class="formdescription">What is your idea? Talk about what your actually doing. The next part will be about why you're doing it.<p>
+    <%= f.text_area :description , :class => 'textbox', :placeholder => 'Description', :rows => '3' %>
   </div>
   <div class="field">
-    <%= f.text_field :story , :class => 'textbox', :placeholder => 'Tell us the story behind your project!'%>
+    <h3 class="formheading">What is tthe story of your idea?<h3>
+    <p class="formdescription">Talk about where the idea started from and the inspiration of your idea. Talking about the process of how your project came to be can be incredibly helpful.</p>
+    <%= f.text_area :story, :class => 'textbox', :placeholder => 'Tell us the story behind your project!', :rows => '8'%>
   </div>
   <div class="actions">
     <%= f.submit :class => 'submit'%>

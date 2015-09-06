@@ -1,17 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @idea.name %>
-</p>
-
-<%= image_tag @idea.image.url(:medium) %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
 
-<p>
-  <strong>Description:</strong>
-  <%= @idea.description %>
-</p>
+  <h1><%= @idea.name %></h3>
+  <div><%= image_tag @idea.image.url(:medium) %></div>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+  <h3 class="formheading">The Idea:</h3>
+  <p><%= @idea.description %></p>
+
+  <h3 class="formheading">Our Story</h3>
+  <p><%= @idea.story %></p>
+  <br>
+  <p><%= link_to 'Edit', edit_idea_path(@idea) %> | <%= link_to 'Back', ideas_path %></p>
+</div>
+<div class="bki" style="background-image:url(@idea.image);">
+
+</div>
