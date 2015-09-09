@@ -1,7 +1,6 @@
 @import "bootstrap";
 
 #welcome{
-  width: 500px;
   border-radius: 10px 10px 0px 0px;
   margin:15% auto 30%;
   background-color: rgba(54,177,191,1);
@@ -95,6 +94,12 @@
   margin-right: auto;
 
 }
+.centerObject{
+  line-height: normal;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
 .field{
   display: inline-block;
 }
@@ -104,6 +109,9 @@
   margin-top: 20%;
   clear: both;
   z-index: -9;
+}
+.r_annot{
+  padding: 20px;
 }
 .red{
   color: rgba(242,56,90,1);
@@ -168,26 +176,32 @@
   border: 0px;
 }
 .trans6{
-  background-color: rgba(255,255,255,.6)
+  background-color: rgba(255,255,255,.6);
+}
+.trans7{
+  background-color: rgba(255,255,255,.7);
 }
 .trans8{
-  background-color: rgba(255,255,255,.8)
+  background-color: rgba(255,255,255,.8);
 }
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
-	height: 0;
+	// height: 0;
 }
 .videoWrapper iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	// width: 100%;
+	// height: 100%;
 }
 .debug{
   border: 1px dashed red;
+}
+.debug2{
+  border: 1px dashed blue;
 }
 h1{
   padding: 10px;
