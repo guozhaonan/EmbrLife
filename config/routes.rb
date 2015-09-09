@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :admins
   resources :ideas
 
   devise_for :users
 
   root 'pages#home'
+  get 'admin/manage_users'
+  get 'admin/manage_posts'
 
   get '/users' => 'users#index'
   get '/:username' => 'users#show', as: :user
