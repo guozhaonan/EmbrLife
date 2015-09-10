@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'admin/manage_users'
-  get 'admin/manage_posts'
+  get 'admin/manage_ideas'
 
   get '/users' => 'users#index'
   get '/:username' => 'users#show', as: :user
