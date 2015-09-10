@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, except: [:index, :show, :delete]
+  before_action :authenticate_user!, except: [:index, :show]
   #Breaks Admin Delete Privileges
 
   # GET /ideas
