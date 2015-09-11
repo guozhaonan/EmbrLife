@@ -2,7 +2,7 @@
 
 #welcome{
   border-radius: 10px 10px 0px 0px;
-  margin:15% auto 30%;
+  margin:15% auto 0%;
   background-color: rgba(54,177,191,1);
 }
 #left{
@@ -24,7 +24,7 @@
   width: 100%;
 }
 .bk {
-  background-image:url(mac.jpeg);
+  background-image:url(clouds.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   position:fixed;
@@ -113,9 +113,6 @@
 .r_annot{
   height: 310px;
   padding: 0px;
-}
-.red{
-  color: rgba(242,56,90,1);
 }
 .section{
   width:100%;
@@ -207,11 +204,7 @@
 .debug2{
   border: 1px dashed blue;
 }
-h1{
-  padding: 10px;
-  background-color: rgba(245,165,3,.8);
-  color: #E9F1DF;
-}
+
 h5{
   background-color: #36B1BF;
   color: #E9F1DF;
@@ -225,4 +218,18 @@ h5{
 .formdescription{
   color: gray;
   font-size: 12px;
+}
+
+// Colors
+.red{
+  color: rgba(242,56,90,1);
+}
+.orange{
+  color: rgba(245,165,3,1);
+}
+.toupe{
+  color: rgba(233,241,223,1);
+}
+.darkCyan{
+  color: rgba(54,177,191,1);
 }
