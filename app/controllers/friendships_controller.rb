@@ -14,9 +14,11 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
+    @friendship = current_user.friendships.find(params[:id])
     @friendship.destroy
     respond_to do |format|
-      format.html { redirect_to friendships_url, notice: 'Friendship was successfully destroyed.' }
+      #Fix this line (Redirects to Home but it'd be nice to redirect back to user)
+      format.html { redirect_to root_path, notice: 'Friendship was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

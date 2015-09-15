@@ -1,5 +1,11 @@
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-<%= @user.email %>
-<%= @user.college %>
-<%= @user.bio %>
-<%= @user.values %>
+<h3>Email:</h3><%= @user.email %>
+<h3>College:</h3><%= @user.college %>
+<h3>Bio:</h3><%= @user.bio %>
+<h3>Values:</h3><%= @user.values %>
+<h2>Friends List</h2>
+<ul>
+<% for friendship in @user.friendships %>
+  <li><%= friendship.friend.email %>(<%= link_to "Unfriend", friendship, :method => :delete %>)</li>
+<% end %>
+</ul>
