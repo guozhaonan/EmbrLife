@@ -3,9 +3,16 @@
 <h3>College:</h3><%= @user.college %>
 <h3>Bio:</h3><%= @user.bio %>
 <h3>Values:</h3><%= @user.values %>
-<h2>Friends List</h2>
+<h2>Following</h2>
 <ul>
 <% for friendship in @user.friendships %>
   <li><%= friendship.friend.email %>(<%= link_to "Unfriend", friendship, :method => :delete %>)</li>
 <% end %>
+</ul>
+
+<h2>Followers</h2>
+<ul>
+<% for user in @user.inverse_friends %>
+    <li><%=h user.email %></li>
+  <% end %>
 </ul>
