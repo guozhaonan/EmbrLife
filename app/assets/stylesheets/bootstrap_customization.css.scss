@@ -71,20 +71,10 @@
   border-radius: 2px;
 }
 .browsebtn{
-  width: 50%;
-  height: 50px;
-  float: left;
-  padding: 15px;
-  background-color: rgba(54,177,191,1);
-  text-align: center;
-  vertical-align: middle;
-  color: rgba(233,241,233,.9);
-  font-size: 16px;
+  margin-top: 15%;
 }
 .browsebtn:hover{
-  color: rgba(233,241,233,.9);
-  background-color: rgba(242,56,90,1);
-  font-size: 18px;
+  margin-top: 14%;
 }
 .browsebtn:hover .red{
   color: rgba(74,217,217,1);
@@ -234,6 +224,25 @@ h5{
 .toupe{
   color: rgba(233,241,223,1);
 }
+.lightCyan{
+  color: rgba(74, 217, 217, 1);
+}
 .darkCyan{
   color: rgba(54,177,191,1);
+}
+//background colors
+.bk_red{
+  background-color: rgba(242,56,90,1);
+}
+.bk_orange{
+  background-color: rgba(245,165,3,1);
+}
+.bk_toupe{
+  background-color: rgba(233,241,223,1);
+}
+.bk_lightCyan{
+  background-color: rgba(74, 217, 217, 1);
+}
+.bk_darkCyan{
+  background-color: rgba(54,177,191,1);
 }
