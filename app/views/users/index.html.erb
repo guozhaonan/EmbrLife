@@ -1,12 +1,13 @@
 
   <div class="container">
     <h1>Profiles</h1>
-    <% @users.each do |u| %>
+    <% @users.each do |user| %>
     <div class =  "bg-info col-md-8 col-md-offset-2" style = "margin-top: 10px;">
       <div class="page-header">
-        <%= link_to u.first_name+" "+u.last_name, user_path(u.username) %>
-        <%= u.email %>
-        <%= u.bio %>
+        <%= link_to user.first_name+" "+user.last_name, user_path(user.username) %>
+        <%= user.email %>
+        <%= user.bio %>
+        <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
       </div>
     </div>
     <% end %>
