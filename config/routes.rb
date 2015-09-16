@@ -12,9 +12,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'admin/manage_users'
   get 'admin/manage_ideas'
-  authenticated :user do
-    get '/users' => 'users#index'
-  end
+  get '/users' => 'users#index'
   get '/:username' => 'users#show', as: :user
 
   # The priority is based upon order of creation: first created -> highest priority.
