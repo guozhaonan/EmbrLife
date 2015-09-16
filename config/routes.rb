@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
   resources :friendships
-  devise_for :admins
   resources :ideas
+  devise_for :admins
 
   devise_for :users
+
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => "devise/sessions#new"
+    end
+  end
+
+  resources :conversations do
+    resources :messages
+  end
 
   root 'pages#home'
   get 'admin/manage_users'
   get 'admin/manage_ideas'
-
-  get '/users' => 'users#index'
+  authenticated :user do
+    get '/users' => 'users#index'
+  end
   get '/:username' => 'users#show', as: :user
 
   # The priority is based upon order of creation: first created -> highest priority.

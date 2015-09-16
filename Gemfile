@@ -26,6 +26,9 @@ gem 'bootstrap-sass'
 gem 'devise'
 #For adding images to the Ideas (May become more complex later but for MVP)
 gem 'paperclip', '~> 4.2'
+#Adding Messaging to app via Private Pub
+gem 'private_pub'
+gem 'thin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
