@@ -200,7 +200,8 @@ var ready = function () {
         },
 
         /**
-         * Responsible for handling minimize and maximize of the chatbox
+         * Responsible for handling the growth of chatboxes as they increase on the page
+         * Keeps track of the minimized chatboxes etc
          *
          * @param conversation_id
          */

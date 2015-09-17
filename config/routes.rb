@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
   resources :friendships
   resources :ideas
-  devise_for :admins
-
-  devise_for :users
-
   resources :conversations do
     resources :messages
   end
 
+  devise_for :admins
+  devise_for :users
+
+
   root 'pages#home'
+  
   get 'admin/manage_users'
   get 'admin/manage_ideas'
   get '/users' => 'users#index'
