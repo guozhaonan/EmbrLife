@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :ideas
+  has_and_belongs_to_many :ideas
 
   has_many :friendships
 
@@ -23,5 +23,5 @@ class User < ActiveRecord::Base
   def create_default_conversation
     Conversation.create(sender_id: 1, recipient_id: self.id) unless self.id == 1
   end
-  
+
 end

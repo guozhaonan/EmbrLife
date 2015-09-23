@@ -5,12 +5,9 @@
           <%= image_tag idea.image(:thumb) %>
           <%= link_to idea.name, idea %>
           <%= idea.tagline %>
-          <% if idea.user %>
-            <%= idea.user.email %>
-          <% end %>
           <%= idea.description %>
           <% if idea.user == current_user %>
-            <%= link_to 'Edit', edit_idea_path(idea) %> |
+            <%= link_to 'Edit', edit_idea_path(idea) %>
             <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
       <% end %>
