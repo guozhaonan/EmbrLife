@@ -178,6 +178,18 @@
 .trans10{
   background-color: rgba(255,255,255,1);
 }
+.dctrans5{
+  background-color: rgba(54, 177, 191,.5);
+}
+.dctrans6{
+  background-color: rgba(54, 177, 191,.6);
+}
+.dctrans7{
+  background-color: rgba(54, 177, 191,.7);
+}
+.dctrans8{
+  background-color: rgba(54, 177, 191,.8);
+}
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -214,19 +226,19 @@ h5{
 }
 
 // Colors
-.red{
+.redtxt{
   color: rgba(242,56,90,1);
 }
-.orange{
+.orangetxt{
   color: rgba(245,165,3,1);
 }
-.toupe{
+.toupetxt{
   color: rgba(233,241,223,1);
 }
-.lightCyan{
+.lightCyantxt{
   color: rgba(74, 217, 217, 1);
 }
-.darkCyan{
+.darkCyantxt{
   color: rgba(54,177,191,1);
 }
 //background colors
