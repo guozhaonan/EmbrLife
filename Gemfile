@@ -24,8 +24,6 @@ gem 'private_pub'
 gem 'thin'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
-#Add Bootstrap Design elements
-gem 'bootstrap-sass'
 #Devise for Users
 gem 'devise'
 #For adding images to the Ideas (May become more complex later but for MVP)
