@@ -3,8 +3,11 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  #creates relationship between ideas
   has_and_belongs_to_many :ideas
 
+  #creates self referential relationships
   has_many :friendships
 
   has_many :friends, :through => :friendships
