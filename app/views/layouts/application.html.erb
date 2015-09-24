@@ -5,6 +5,7 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="screen,projection">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
   <title>IdeaDeck</title>
@@ -13,6 +14,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!--Import jQuery before materialize.js-->
+       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+       <script type="text/javascript" src="js/materialize.min.js"></script>
 
 <% flash.each do |name, msg| %>
   <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
@@ -24,6 +28,7 @@
 <%= render "layouts/header" %>
 
 <%= yield %>
+
 
 </body>
 </html>

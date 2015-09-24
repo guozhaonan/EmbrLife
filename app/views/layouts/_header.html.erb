@@ -31,10 +31,11 @@
   </div><!-- /.container
 </nav>
 -->
-<nav>
-  <div class="nav-wrapper bk_darkCyan">
+<nav role = "navigation">
+  <div class="nav-wrapper bk_darkCyan container">
     <%= link_to "IdeaDeck", root_path, class: "brand-logo" %>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a> -->
+    <%= link_to root_path, class:"button-collapse" do %><div data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></div> <% end %>
     <ul class="right hide-on-med-and-down">
       <li><%= link_to "Home", root_path %></li>
       <% if user_signed_in? %>
@@ -65,3 +66,9 @@
     </ul>
   </div>
 </nav>
+
+<script type="text/javascript">
+  $( document ).ready(function(){
+    $('.button-collapse').sideNav();
+  })
+</script>
