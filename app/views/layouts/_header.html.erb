@@ -1,6 +1,6 @@
-<!--<nav class="navbar navbar-static-top navbar-default" role="navigation" style="background-color:rgba(255,255,255,.8)">
+<nav class="navbar navbar-static-top navbar-default" role="navigation" style="background-color:rgba(255,255,255,.8)">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -11,13 +11,13 @@
       <%= link_to "IdeaDeck", root_path, class: "navbar-brand" %>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling
+    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="ttp nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
           <li>
-            <!-- This is for actions involving users signed in
+            <!-- This is for actions involving users signed in -->
           </li>
           <li><%= link_to "My Profile", user_path(current_user.username) %></li>
           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
@@ -27,41 +27,6 @@
           <li><%= link_to "Sign up", new_user_registration_path%></li>
         <% end %>
       </ul>
-    </div><!-- /.navbar-collapse
-  </div><!-- /.container
-</nav>
--->
-<nav>
-  <div class="nav-wrapper bk_darkCyan">
-    <%= link_to "IdeaDeck", root_path, class: "brand-logo" %>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><%= link_to "Home", root_path %></li>
-      <% if user_signed_in? %>
-        <li>
-          <!-- This is for actions involving users signed in -->
-        </li>
-        <li><%= link_to "My Profile", user_path(current_user.username) %></li>
-        <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-        <li><%= link_to "Sign up", new_user_registration_path%></li>
-      <% end %>
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <li><%= link_to "Home", root_path %></li>
-      <% if user_signed_in? %>
-        <li>
-          <!-- This is for actions involving users signed in -->
-        </li>
-        <li><%= link_to "My Profile", user_path(current_user.username) %></li>
-        <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-        <li><%= link_to "Sign up", new_user_registration_path%></li>
-      <% end %>
-    </ul>
-  </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-->
 </nav>
