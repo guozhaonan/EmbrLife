@@ -2,11 +2,6 @@
 <html>
 <head>
   <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
   <title>IdeaDeck</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -24,6 +19,8 @@
 <%= render "layouts/header" %>
 
 <%= yield %>
+
+<%= render "users/userchat" %>
 
 </body>
 </html>

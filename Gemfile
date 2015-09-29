@@ -28,6 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 #For adding images to the Ideas (May become more complex later but for MVP)
 gem 'paperclip', '~> 4.2'
+#For design stuff and because Materialize is not well documented
+gem 'bootstrap-sass'
 
 
 # Use ActiveModel has_secure_password
