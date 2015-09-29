@@ -1,0 +1,21 @@
+<ul class="collection">
+  <% @ideas.each do |idea| %>
+    <%= link_to (idea) do %>
+      <li class="collection-item avatar">
+
+        <%= image_tag idea.image(:thumb) %>
+
+        <span class="title"><%= idea.name %></span>
+
+        <p><%= idea.tagline %></p>
+
+        <% if idea.user_id == current_user %>
+            <%= link_to 'Edit', edit_idea_path(idea) %>
+            <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+
+
+    <% end %>
+    </li>
+  <% end %>
+</ul>

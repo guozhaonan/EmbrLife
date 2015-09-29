@@ -7,11 +7,13 @@ class IdeasController < ApplicationController
   # GET /ideas.json
   def index
     @ideas = Idea.all
+    #Follow Logic
   end
 
   # GET /ideas/1
   # GET /ideas/1.json
   def show
+    #Follow Logic
   end
 
   # GET /ideas/new

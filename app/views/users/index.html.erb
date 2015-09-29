@@ -7,11 +7,10 @@
         <%= user.email %>
         <%= user.bio %>
         <!-- If user is already friend or if user is user then hide the link -->
-
-        <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-        <%= index +=1 %>
-        <!-- If user is friend and user isn't current_user display link -->
         <% if user_signed_in? %>
+          <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+          <%= index +=1 %>
+          <!-- If user is friend and user isn't current_user display link -->
           <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
                       "data-sid" => current_user.id, "data-rip" => user.id %>
         <% end %>
