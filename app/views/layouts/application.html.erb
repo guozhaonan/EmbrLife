@@ -17,6 +17,7 @@
 <% end %>
 
 <%= render "layouts/header" %>
+<% if user_signed_in? %>
 
   <div class="container-fluid">
 
@@ -32,5 +33,10 @@
 
   </div>
 </div>
+<% else %>
+
+<%= yield %>
+
+<% end %>
 </body>
 </html>
