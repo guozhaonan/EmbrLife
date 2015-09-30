@@ -1,27 +1,72 @@
 <div style="font-family:Open Sans; font-size:72px;">
-  <h1 class = "center toupetxt" style="margin-top:15%;">Let's Build Something.<br><span class = "orangetxt">Awesome.<span><br><span class = "redtxt">Together.</span></h1>
+  <h1 class = "center id_toupetext" style="margin-top:10%;">Let's Build Something.<br>Awesome.<br>Together.</h1>
 </div>
 
-<div class = "row" style="height: 100px; margin-bottom:20px;">
-  <%= link_to users_path do %>
-      <div class = "col-md-4 bk_darkCyan center toupetxt browsebtn" style="height:100%;padding-top:20px;font-size:20px;">
-        Discover People
+<div class="row" style="height:50px;">
+
+</div>
+
+<div class="container">
+  <div class = "row" style="height: 100px; margin-bottom:20px;">
+    <div class="col-sm-12" style="margin:0px">
+      <div class="thumbnail white">
+        <div class="caption">
+          <p>
+            IdeaDeck is a platform allows entrepreneurs to pitch their ideas and current needs, and at the same time browse and inquire about other startups and their needs. We also provide a community aspect that has resources and tools that will help break the ice and smooth out these connections. We use <b><%=link_to "ideas", ideas_path, class:"id_dcyantext"%></b> are our engines, <b><%= link_to "entrepreners", users_path, class:"id_dcyantext" %></b> are our fuel, and the <span class="id_dcyantext"><b>community</b></span> as our catalyst.
+          </p>
+        </div>
       </div>
-  <% end %>
-  <%= link_to ideas_path do %>
-    <div class = "col-md-4 bk_red center toupetxt browsebtn" style="height:100%;padding-top:20px;font-size:20px;">
-      Discover Ideas
     </div>
-  <% end %>
-  <%= link_to ideas_path do %>
-    <div class = "col-md-4 bk_orange center toupetxt browsebtn" style="height:100%;padding-top:20px;font-size:20px;">
-      Community
-    </div>
-  <% end %>
-</div>
-<div class="row">
+  </div>
+  <div class="row">
 
-</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="thumbnail id_dcyan" style="margin:0px;">
+        <div class="caption">
+          <h3 class="id_toupetext"><%=link_to "Ideas as engines", ideas_path, class:"id_toupetext"%></h3>
+          <p class="id_toupetext">
+            Ideas are really awesome. It's what inspires people, it's what drives people to action. When ideas are the foundation for your organization, it's ultimately what will drive people to make an impact. That's why we're using ideas as a foundation for our site.
+          </p>
+          <br>
+          <p class="id_toupetext"> Go ahead, create an <a href = "ideadeck/signup_idea.html" class="id_redtext">IdeaPage!</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="thumbnail id_orange" style="margin:0px;">
+        <div class="caption">
+          <h3 class="id_toupetext"><%=link_to "Users as fuel", users_path, class:"id_toupetext"%></h5>
+          <p class="id_toupetext">
+            Just because we believe in the idea doesn't mean we don't understand the value that each person brings! Our profiles are built to help our users tell their story. We want people using our site to be able to share what they really believe.
+          </p>
+          <br>
+          <p class="id_toupetext">
+            Check it out and <a href="ideadeck.me/signup_user.html" class="id_redtext">Join us!</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4">
+      <div class="thumbnail id_red" style="margin:0px;">
+        <div class="caption">
+          <h3 class="id_toupetext">Community as a catalyst</h5>
+          <p class="id_toupetext">
+            One of the most beneficial components of a successful startup is community support. That's why we're building an online community to help our entrepreneurs find resources and discuss their ideas.
+          </p>
+          <br>
+          <p class="id_toupetext">
+            Coming soon!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+
+  </div>
   <div class = "row" style = "margin-top:20px;">
     <div class = "col-md-2"></div>
     <div class = "col-md-4 r_annot trans10"style="padding:20px;">
@@ -42,7 +87,7 @@
     </div>
     <div class = "col-md-4 center" style="padding:0px;"><iframe width=100% height="310" src="https://www.youtube.com/embed/bNpx7gpSqbY" frameborder="0" allowfullscreen></iframe></div>
     <div class = "col-md-2"></div>
-  </div>
+  </div> -->
 
   <div class = "row">
     <div class = "col-md-12" style="height:100px;"></div>
@@ -50,6 +95,5 @@
 </div>
 
 <div class = "bk">
-  <div class = "dctrans7" style="height:100%;width:100%;">
-  </div>
+
 </div>

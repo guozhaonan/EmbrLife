@@ -28,7 +28,7 @@
   width: 100%;
 }
 .bk {
-  background-image:url(clouds.jpeg);
+  background-image:url(mac.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   position:fixed;
@@ -227,37 +227,44 @@ h5{
 }
 
 // Colors
-.redtxt{
-  color: rgba(242,56,90,1);
+.id_red{
+  background-color: #F2385A !important;
 }
-.orangetxt{
-  color: rgba(245,165,3,1);
+
+.id_orange{
+  background-color: #F5A503 !important;
 }
-.toupetxt{
-  color: rgba(233,241,223,1);
+.id_toupe{
+  background-color: #E9F1DF !important;
 }
-.lightCyantxt{
-  color: rgba(74, 217, 217, 1);
+.id_lcyan{
+  background-color: #4AD9D9 !important;
 }
-.darkCyantxt{
-  color: rgba(54,177,191,1);
+.id_lcyan7{
+  background-color: rgba(74, 217, 217, 0.7) !important;
 }
-//background colors
-.bk_red{
-  background-color: rgba(242,56,90,1);
+.id_dcyan{
+  background-color: #36B1BF !important;
 }
-.bk_orange{
-  background-color: rgba(245,165,3,1);
+.id_dcyan7{
+  background-color: rgba(54, 177, 191, 0.7) !important;
 }
-.bk_toupe{
-  background-color: rgba(233,241,223,1);
+.id_redtext{
+  color: #F2385A !important;
 }
-.bk_lightCyan{
-  background-color: rgba(74, 217, 217, 1);
+.id_orangetext{
+  color: #F5A503 !important;
 }
-.bk_darkCyan{
-  background-color: rgba(54,177,191,1);
+.id_toupetext{
+  color: #E9F1DF !important;
 }
+.id_lcyantext{
+  color: #4AD9D9 !important;
+}
+.id_dcyantext{
+  color: #36B1BF !important;
+}
+
 /*
  * Sidebar
  */
@@ -297,4 +304,8 @@ h5{
 .nav-sidebar > .active > a:focus {
   color: #fff;
   background-color: #428bca;
+}
+.thumbnail{
+  border-width: 0px;
+  border-radius: 0px;
 }
