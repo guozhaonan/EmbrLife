@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
   def index
-    if user_signed_in?
-      @users = User.where.not("id = ?",current_user.id).order("created_at DESC")
-      @conversations = Conversation.involving(current_user).order("created_at DESC")
-    end
     @users = User.all
   end
 
