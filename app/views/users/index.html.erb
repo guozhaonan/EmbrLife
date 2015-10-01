@@ -1,22 +1,25 @@
 <div class="container">
     <h1>Profiles</h1>
-    <% @users.each_with_index do |user, index| %>
-    <div class =  "bg-info col-md-8 col-md-offset-2" style = "margin-top: 10px;">
-      <div class="page-header">
-        <%= link_to user.first_name+" "+user.last_name, user_path(user.username) %>
-        <%= user.email %>
-        <%= user.bio %>
-        <!-- If user is already friend or if user is user then hide the link -->
-        <% if user_signed_in? %>
-          <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
-          <%= index +=1 %>
-          <!-- If user is friend and user isn't current_user display link -->
-          <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
-                      "data-sid" => current_user.id, "data-rip" => user.id %>
-        <% end %>
-      </div>
+    <div class="row">
+      <% @users.each_with_index do |user, index| %>
+        <div class =  "col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="page-header">
+              <%= link_to user.first_name+" "+user.last_name, user_path(user.username) %><br>
+              <%= user.email %><br>
+              <%= user.bio %><br>
+              <!-- If user is already friend or if user is user then hide the link -->
+              <% if user_signed_in? %>
+                <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %><br>
+                <!-- If user is friend and user isn't current_user display link -->
+                <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+                            "data-sid" => current_user.id, "data-rip" => user.id %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 
 <div class="bk3">
