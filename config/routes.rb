@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
 
   root 'pages#home'
-
+  get 'pages/about'
   get 'admin/manage_users'
   get 'admin/manage_ideas'
   get '/users' => 'users#index'

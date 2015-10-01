@@ -1,3 +1,6 @@
+<div class = "bk">
+
+</div>
 <div style="font-family:Open Sans; font-size:72px;">
   <h1 class = "center id_toupetext" style="margin-top:10%;">Let's Build Something.<br>Awesome.<br>Together.</h1>
 </div>
@@ -8,11 +11,11 @@
 
 <div class="container">
   <div class = "row" style="height: 100px; margin-bottom:20px;">
-    <div class="col-sm-12" style="margin:0px">
-      <div class="thumbnail white">
+    <div class="col-xs-12 col-sm-12" style="margin:0px">
+      <div class="thumbnail id_toupe">
         <div class="caption">
           <p>
-            IdeaDeck is a platform allows entrepreneurs to pitch their ideas and current needs, and at the same time browse and inquire about other startups and their needs. We also provide a community aspect that has resources and tools that will help break the ice and smooth out these connections. We use <b><%=link_to "ideas", ideas_path, class:"id_dcyantext"%></b> are our engines, <b><%= link_to "entrepreners", users_path, class:"id_dcyantext" %></b> are our fuel, and the <span class="id_dcyantext"><b>community</b></span> as our catalyst.
+            IdeaDeck is a platform allows entrepreneurs to pitch their ideas and current needs, and at the same time browse and inquire about other startups and their needs. We also provide a community aspect that has resources and tools that will help break the ice and smooth out these connections. We use <b><%=link_to "ideas", ideas_path, class:"id_dcyantext"%></b> are our engines, <b><%= link_to "entrepreneurs", users_path, class:"id_dcyantext" %></b> are our fuel, and the <span class="id_dcyantext"><b>community</b></span> as our catalyst.
           </p>
         </div>
       </div>
@@ -30,7 +33,7 @@
             Ideas are really awesome. It's what inspires people, it's what drives people to action. When ideas are the foundation for your organization, it's ultimately what will drive people to make an impact. That's why we're using ideas as a foundation for our site.
           </p>
           <br>
-          <p class="id_toupetext"> Go ahead, create an <a href = "ideadeck/signup_idea.html" class="id_redtext">IdeaPage!</a></p>
+          <p class="id_toupetext"> Go ahead, create an <%=link_to "IdeaPage!", new_idea_path, class:"id_redtext"%></p>
         </div>
       </div>
     </div>
@@ -43,7 +46,7 @@
           </p>
           <br>
           <p class="id_toupetext">
-            Check it out and <a href="ideadeck.me/signup_user.html" class="id_redtext">Join us!</a>
+            Check it out and <%=link_to "Join us!", new_user_registration_path, class:"id_redtext"%>
           </p>
         </div>
       </div>
@@ -92,8 +95,4 @@
   <div class = "row">
     <div class = "col-md-12" style="height:100px;"></div>
   </div>
-</div>
-
-<div class = "bk">
-
 </div>
