@@ -12,17 +12,24 @@
     <% if user_signed_in? %>
       <% @users = User.where.not("id = ?",current_user.id).order("created_at DESC") %>
       <% @conversations = Conversation.involving(current_user).order("created_at DESC") %>
-      <div class="container-fluid">
+      <div class="container-fluid" style="height:100%">
+        <%= render "layouts/header" %>
         <div class="row">
-          <div class="col-sm-9 col-md-10" style="padding:0px;">
-            <%= render "layouts/header" %>
-            <% flash.each do |name, msg| %>
-              <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong><%= msg %></strong>
+          <div class="col-sm-9 col-md-10">
+            <div class="row">
+              <% flash.each do |name, msg| %>
+                <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <strong><%= msg %></strong>
+                </div>
+              <% end %>
+            </div>
+            <div class="row">
+              <div class="container">
+                <%= yield %>
               </div>
-            <% end %>
-            <%= yield %>
+            </div>
+
           </div>
           <div class="col-sm-3 col-md-2">
             <%= render "users/userchat" %>
@@ -39,7 +46,9 @@
             <strong><%= msg %></strong>
           </div>
         <% end %>
-        <%= yield %>
+        <div class="container">
+          <%= yield %>
+        </div>
       </div>
     <% end %>
     </div>

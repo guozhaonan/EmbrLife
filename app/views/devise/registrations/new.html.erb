@@ -26,7 +26,7 @@
       <%= f.password_field :password_confirmation, autocomplete: "off",:class => 'textbox', :placeholder => 'Confirm Password' %>
     </div>
     <h3>Tell us a little about yourself:</h3>
-    <div class = "field"> 
+    <div class = "field">
       <%= f.text_field :bio, autofocus: true, :class => 'textbox', :placeholder => 'Tell us your story...'%>
     </div>
     <div class = "field">
@@ -42,9 +42,4 @@
   <% end %>
 
   <div style="text-align:center;">or <%= render "devise/shared/links" %></div>
-</div>
-
-<div class = "bk4">
-  <!-- <div class = "trans3" style="width:100%;height:100%;">
-  </div> -->
 </div>

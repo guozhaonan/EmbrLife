@@ -7,7 +7,7 @@
       <!-- This is for actions involving users signed in -->
     <%= link_to user_path(current_user.username) do %><div class="row nav_item"><ul style="margin-bottom:0px;">My Profile</ul></div><% end %>
     <%= link_to edit_user_registration_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Account Settings</ul></div><% end %>
-    <%= link_to destroy_user_session_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Log Out</ul></div><% end %>
+    <%= link_to destroy_user_session_path, method: :delete do %><div class="row nav_item"><ul style="margin-bottom:0px;">Log Out</ul></div><% end %>
   <% else %>
     <%= link_to new_user_session_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Sign In</ul></div><% end %>
     <%= link_to new_user_registration_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Sign Up</ul></div><% end %>
