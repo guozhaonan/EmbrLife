@@ -8,35 +8,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if user_signed_in? %>
-    <% @users = User.where.not("id = ?",current_user.id).order("created_at DESC") %>
-    <% @conversations = Conversation.involving(current_user).order("created_at DESC") %>
-    <div class="container-fluid">
-      <div class="row">
-        <%= render "users/userchat" %>
-        <%= render "layouts/header" %>
-        <div class="col-sm-9 col-md-10" style="padding:0px;margin-top:50px;">
-          <% flash.each do |name, msg| %>
-            <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <strong><%= msg %></strong>
-            </div>
-          <% end %>
-          <%= yield %>
+  <div class="bk"></div>
+    <% if user_signed_in? %>
+      <% @users = User.where.not("id = ?",current_user.id).order("created_at DESC") %>
+      <% @conversations = Conversation.involving(current_user).order("created_at DESC") %>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-9 col-md-10" style="padding:0px;">
+            <%= render "layouts/header" %>
+            <% flash.each do |name, msg| %>
+              <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong><%= msg %></strong>
+              </div>
+            <% end %>
+            <%= yield %>
+          </div>
+          <div class="col-sm-3 col-md-2">
+            <%= render "users/userchat" %>
+          </div>
         </div>
       </div>
+    <% else %>
+    <div class="row">
+      <%= render "layouts/header" %>
+      <div class="col-sm-12 col-md-12">
+        <% flash.each do |name, msg| %>
+          <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong><%= msg %></strong>
+          </div>
+        <% end %>
+        <%= yield %>
+      </div>
+    <% end %>
     </div>
-  <% else %>
-    <%= render "layouts/header" %>
-    <div class="col-sm-12 col-md-12" style="padding:0px;margin-top:50px;">
-      <% flash.each do |name, msg| %>
-        <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong><%= msg %></strong>
-        </div>
-      <% end %>
-      <%= yield %>
-    </div>
-  <% end %>
   </body>
 </html>

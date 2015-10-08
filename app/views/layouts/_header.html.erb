@@ -1,32 +1,15 @@
-<nav class="navbar navbar-fixed-top navbar-default id_dcyan" role="navigation" style="border-width:0px;">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "IdeaDeck", root_path, class: "navbar-brand id_toupetext" %>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="ttp nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path, class: "id_toupetext" %></li>
-        <% if user_signed_in? %>
-            <!-- This is for actions involving users signed in -->
-          <li><%= link_to "About Us", pages_about_path, class: "id_toupetext" %></li>
-          <li><%= link_to "My Profile", user_path(current_user.username), class: "id_toupetext" %></li>
-          <li><%= link_to "Account Settings", edit_user_registration_path, class: "id_toupetext" %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "id_toupetext" %></li>
-        <% else %>
-          <li><%= link_to "About Us", pages_about_path, class: "id_toupetext" %></li>
-          <li><%= link_to "Sign in", new_user_session_path, class: "id_toupetext" %></li>
-          <li><%= link_to "Sign up", new_user_registration_path, class: "id_toupetext" %></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-->
-</nav>
+<input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+<div class="menu container">
+  <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+  <%= link_to root_path do %><div class="row nav_item"style="margin-top:25px;"><ul style="margin-bottom:0px;">Home</ul></div><% end %>
+  <%= link_to pages_about_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">About Us</ul></div><% end %>
+  <% if user_signed_in? %>
+      <!-- This is for actions involving users signed in -->
+    <%= link_to user_path(current_user.username) do %><div class="row nav_item"><ul style="margin-bottom:0px;">My Profile</ul></div><% end %>
+    <%= link_to edit_user_registration_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Account Settings</ul></div><% end %>
+    <%= link_to destroy_user_session_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Log Out</ul></div><% end %>
+  <% else %>
+    <%= link_to new_user_session_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Sign In</ul></div><% end %>
+    <%= link_to new_user_registration_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Sign Up</ul></div><% end %>
+  <% end %>
+</div>
