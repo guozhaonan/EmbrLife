@@ -309,7 +309,7 @@ label:focus {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(74, 217, 217, .9);;
@@ -328,8 +328,8 @@ label:focus {
   display: block;
   padding: 0;
   text-indent: -9999px;
-  background: url(http://stepupdate.com/assets/svg/icon-hamburger.svg) 50% 50%/35px 35px no-repeat;
-  color: rgb(245, 265, 3);
+  background: #136a8a url(http://stepupdate.com/assets/svg/icon-hamburger.svg) 50% 50%/35px 35px no-repeat;
+  z-index: 1000;
 }
 .menu ul li > label {
   background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50%/16px 16px no-repeat;

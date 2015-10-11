@@ -15,7 +15,7 @@
       <div class="container-fluid" style="height:100%">
         <%= render "layouts/header" %>
         <div class="row">
-          <div class="col-sm-9 col-md-10">
+          <div class="col-sm-9 col-md-10 col-sx-12">
             <div class="row">
               <% flash.each do |name, msg| %>
                 <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
@@ -39,7 +39,7 @@
     <% else %>
     <div class="row">
       <%= render "layouts/header" %>
-      <div class="col-sm-12 col-md-12">
+      <div class="col-sm-12 col-md-12 col-sx-12">
         <% flash.each do |name, msg| %>
           <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
