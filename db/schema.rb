@@ -71,6 +71,11 @@ ActiveRecord::Schema.define(version: 20151012181522) do
   add_index "ideas_users", ["idea_id"], name: "index_ideas_users_on_idea_id"
   add_index "ideas_users", ["user_id"], name: "index_ideas_users_on_user_id"
 
+  create_table "lightbulbs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "conversation_id"

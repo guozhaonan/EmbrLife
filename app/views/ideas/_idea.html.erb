@@ -1,17 +1,24 @@
 <% @ideas.each do |idea| %>
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail" style="height: 300px;">
+    <div class="thumbnail" style="height: 300px; padding:0px;">
       <img src="..." alt="...">
-      <div class="caption">
-        <h3><%= idea.name %></h3>
-        <h4><%= idea.user_id %></h4>
-        <p><%= idea.tagline %></p>
-        <% if idea.user_id == current_user %>
-        <p>
-          <%= link_to 'Edit', edit_idea_path(idea), class: "btn btn-primary" %>
-          <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
-        </p>
+      <hr>
+      <div class="caption" style="padding:0px;">
+        <%= link_to idea_path(idea.id) do%>
+          <div class="id_dcyan user-index-item" style="padding:1px 5px 10px 20px;">
+            <h3><%= idea.name %></h3>
+          </div>
         <% end %>
+        <div class="" style="padding:20px;">
+          <h4><%= idea.user_id %></h4>
+          <p><%= idea.tagline %></p>
+          <% if idea.user_id == current_user %>
+          <p>
+            <%= link_to 'Edit', edit_idea_path(idea), class: "btn btn-primary" %>
+            <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+          </p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

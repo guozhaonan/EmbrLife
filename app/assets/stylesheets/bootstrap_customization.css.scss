@@ -235,41 +235,41 @@
 
 // Colors
 .id_red{
-  background-color: #F2385A !important;
+  background-color: #F2385A;
 }
 
 .id_orange{
-  background-color: #F5A503 !important;
+  background-color: #F5A503;
 }
 .id_toupe{
-  background-color: #E9F1DF !important;
+  background-color: #E9F1DF;
 }
 .id_lcyan{
-  background-color: #4AD9D9 !important;
+  background-color: #4AD9D9;
 }
 .id_lcyan7{
-  background-color: rgba(74, 217, 217, 0.7) !important;
+  background-color: rgba(74, 217, 217, 0.7);
 }
 .id_dcyan{
-  background-color: #36B1BF !important;
+  background-color: #36B1BF;
 }
 .id_dcyan7{
-  background-color: rgba(54, 177, 191, 0.7) !important;
+  background-color: rgba(54, 177, 191, 0.7);
 }
 .id_redtext{
-  color: #F2385A !important;
+  color: #F2385A;
 }
 .id_orangetext{
-  color: #F5A503 !important;
+  color: #F5A503;
 }
 .id_toupetext{
-  color: #E9F1DF !important;
+  color: #E9F1DF;
 }
 .id_lcyantext{
-  color: #4AD9D9 !important;
+  color: #4AD9D9;
 }
 .id_dcyantext{
-  color: #36B1BF !important;
+  color: #36B1BF;
 }
 
 /*
@@ -404,5 +404,5 @@ a:hover{
   color: #E9F1DF;
 }
 .user-index-item:hover{
-  color: #F5A503;
+  color: #F5A503 !important;
 }
