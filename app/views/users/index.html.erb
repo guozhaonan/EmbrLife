@@ -3,7 +3,7 @@
 <div class="row">
   <% @users.each_with_index do |user, index| %>
     <div class =  "col-sm-6 col-md-4">
-      <div class="thumbnail id_toupe" style="padding:0px;">
+      <div class="thumbnail id_toupe" style="padding:0px; height:300px;">
         <div class="container-fluid">
           <%= link_to user_path(user.username), class: "user-index-item" do %>
             <div class="row id_dcyan">
