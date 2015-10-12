@@ -1,12 +1,12 @@
 <div class="sidebar">
-        <ul class="nav nav-sidebar">
-          <li><b>Recently Chatted</b></li>
-          <%= render "conversations/recents" %>
-        </ul>
-        <ul class="nav nav-sidebar">
-          <li><b>All Friends</b></li>
-            <% @users.each_with_index do |user, index| %>
-              <li><%= link_to user.first_name + " " + user.last_name, "#", class: "start-conversation", "data-sid" => current_user.id, "data-rip" => user.id%></li>
-                <% end %>
-        </ul>
+  <ul class="nav nav-sidebar">
+    <li><b>Recently Chatted</b></li>
+    <%= render "conversations/recents" %>
+  </ul>
+  <ul class="nav nav-sidebar">
+  <li><b>All Friends</b></li>
+    <% @users.each_with_index do |user, index| %>
+      <li><%= link_to user.first_name + " " + user.last_name, "#", class: "start-conversation recently-chatted", "data-sid" => current_user.id, "data-rip" => user.id%></li>
+    <% end %>
+  </ul>
 </div>
