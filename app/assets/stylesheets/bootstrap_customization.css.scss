@@ -284,6 +284,7 @@ h5{
 .sidebar {
   display: none;
   height: 100%;
+  z-index: 1000;
 }
 @media (min-width: 768px) {
   .sidebar {
@@ -386,7 +387,11 @@ a:hover{
   padding: 10px;
   padding-left: 30px;
   color: #E9F1DF;
+  background-color: #36B1BF;
 }
 .recently-chatted:hover{
   background-color: #F5A503 !important;
+}
+.chatbox{
+  z-index: 2000;
 }
