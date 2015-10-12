@@ -1,0 +1,11 @@
+<% @conversations.each do |conversation| %>
+  <% time = conversation.updated_at %>
+  <% milliseconds = time.to_i %>
+  <% current_time = Time.now %>
+  <% ct_milli = current_time.to_i %>
+  <% diff = ct_milli - milliseconds %>
+  <% user = User.find(conversation.recipient_id) %>
+  <% if diff < 604800000 %>
+    <li><%= link_to user.first_name + " " + user.last_name, "#", class: "start-conversation", "data-sid" => current_user.id, "data-rip" => user.id%></li>
+  <% end %>
+<% end %>

@@ -12,12 +12,14 @@ class ConversationsController < ApplicationController
 
     render json: { conversation_id: @conversation.id }
   end
-
   def show
     @conversation = Conversation.find(params[:id])
     @reciever = interlocutor(@conversation)
     @messages = @conversation.messages
     @message = Message.new
+  end
+  def recents
+    @conversations = current_user.conversations
   end
 
   private

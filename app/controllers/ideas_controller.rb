@@ -18,7 +18,8 @@ class IdeasController < ApplicationController
 
   # GET /ideas/new
   def new
-    @idea = current_user.ideas.build
+    @user = current_user
+    @idea = @user.ideas.build
   end
 
   # GET /ideas/1/edit
@@ -28,7 +29,8 @@ class IdeasController < ApplicationController
   # POST /ideas
   # POST /ideas.json
   def create
-    @idea = current_user.ideas.build(idea_params)
+    @user = current_user
+    @idea = @user.ideas.build(idea_params)
 
     respond_to do |format|
       if @idea.save
