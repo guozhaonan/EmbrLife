@@ -3,6 +3,9 @@
   <label class="menu-toggle" for="menu"><span>Toggle</span></label>
   <%= link_to root_path do %><div class="row nav_item"style="margin-top:25px;"><ul style="margin-bottom:0px;">Home</ul></div><% end %>
   <%= link_to pages_about_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">About Us</ul></div><% end %>
+  <%= link_to users_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Browse People</ul></div><% end %>
+  <%= link_to ideas_path do %><div class="row nav_item"><ul style="margin-bottom:0px;">Browse Ideas</ul></div><% end %>
+  <hr>
   <% if user_signed_in? %>
       <!-- This is for actions involving users signed in -->
     <%= link_to user_path(current_user.username) do %><div class="row nav_item"><ul style="margin-bottom:0px;">My Profile</ul></div><% end %>

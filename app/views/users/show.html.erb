@@ -1,4 +1,4 @@
-<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<!-- <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 <h3>Email:</h3><%= @user.email %>
 <h3>College:</h3><%= @user.college %>
 <h3>Bio:</h3><%= @user.bio %>
@@ -9,10 +9,72 @@
   <li><%= friendship.friend.email %>(<%= link_to "Unfriend", friendship, :method => :delete %>)</li>
 <% end %>
 </ul>
-
 <h2>Followers</h2>
 <ul>
 <% for user in @user.inverse_friends %>
     <li><%=h user.email %></li>
   <% end %>
-</ul>
+</ul> -->
+<div class="bk2"></div>
+<div class="wrapper-user-show">
+  <div class="row">
+    <div class="col-md-12 " style="height:100px;">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3" style="padding-right:0px;">
+      <div class="thumbnail" style="background-color:gray; height:195px;">
+        <h1>Image</h1>
+      </div>
+    </div>
+    <div class="col-md-9" style="padding-left:0px;">
+      <div class="thumbnail" style=" height:195px;padding:20px;">
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+        <p style="color:gray;margin-bottom:0px;">Title</p>
+        <% if @user.college? %>
+          <p style="color:gray;margin-bottom:0px;"><%= @user.college %></p>
+        <%end%>
+        <p style="color:gray;margin-bottom:0px;">
+          location
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="padding:15px;">
+    <div class="col-md-4">
+      <div class="row">
+        <div class="thumbnail">
+          <h3>About Me</h3>
+          <% if @user.email? %>
+            <h5><span class="id_dcyantext">Email:</span></h5>
+            <p><%= @user.email %></p><br>
+          <%end%>
+          <h5><span class="id_dcyantext">Skills:</span></h5>
+          <p>Skills</p><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="thumbnail">
+          <h3>My Projects</h3>
+          <p>project 1</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8" style="padding-right:0px;">
+      <div class="thumbnail">
+        <% if @user.bio? %>
+          <p><span class="id_dcyantext">My Story </span></p>
+          <p><%= @user.bio %></p><br>
+        <%end%>
+        <% if @user.values? %>
+          <p><span class="id_dcyantext">What I Believe In </span></p>
+          <p><%= @user.values %></p><br>
+        <%end%>
+      </div>
+      <div class="thumbnail">
+        USER FEED
+      </div>
+    </div>
+  </div>
+</div>

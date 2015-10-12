@@ -9,51 +9,44 @@
 </head>
 <body>
   <div class="bk"></div>
-    <% if user_signed_in? %>
-      <% @users = User.where.not("id = ?",current_user.id).order("created_at DESC") %>
-      <% @conversations = Conversation.involving(current_user).order("created_at DESC") %>
-      <div class="container-fluid">
-        <%= render "layouts/header" %>
-        <div class="row">
-          <div class="col-sm-10 col-md-10 col-lg-10 col-sx-12">
-            <div class="row">
-              <% flash.each do |name, msg| %>
-                <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <strong><%= msg %></strong>
-                </div>
-              <% end %>
-            </div>
-            <div class="row">
-              <div class="col-s-1 col-md-1 col-lg-1">
-
+    <div class="container" style="padding:0px;">
+    <%= render "layouts/header" %>
+      <% if user_signed_in? %>
+        <% @users = User.where.not("id = ?",current_user.id).order("created_at DESC") %>
+        <% @conversations = Conversation.involving(current_user).order("created_at DESC") %>
+          <div class="row">
+            <div class="col-sm-10 col-md-10 col-lg-10 col-sx-12">
+              <div class="row">
+                <% flash.each do |name, msg| %>
+                  <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong><%= msg %></strong>
+                  </div>
+                <% end %>
               </div>
-              <div class="col-s-10 col-md-10 col-lg-10">
+              <div class="row">
                 <%= yield %>
               </div>
             </div>
+            <div class="col-sm-2 col-md-2 col-lg-2" style="padding:0px;">
+            </div>
+            <%= render "users/userchat" %>
           </div>
-          <div class="col-sm-2 col-md-2 col-lg-2" style="padding:0px;">
-
+      <% else %>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-sx-12">
+            <% flash.each do |name, msg| %>
+              <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong><%= msg %></strong>
+              </div>
+            <% end %>
           </div>
-          <%= render "users/userchat" %>
+          <div class="row">
+            <%= yield %>
+          </div>
         </div>
-      </div>
-    <% else %>
-    <div class="row">
-      <%= render "layouts/header" %>
-      <div class="col-sm-12 col-md-12 col-sx-12">
-        <% flash.each do |name, msg| %>
-          <div class="alert alert-success alert-dismissible alert-#{name}" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <strong><%= msg %></strong>
-          </div>
-        <% end %>
-        <div class="container">
-          <%= yield %>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
     </div>
   </body>
 </html>
