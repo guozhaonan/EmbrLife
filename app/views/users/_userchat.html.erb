@@ -1,14 +1,16 @@
 <div class="sidebar">
-          <ul class="nav nav-sidebar">
-            <% @users.each_with_index do |user, index| %>
-              <li><%= user.first_name + " " + user.last_name %></li>
-            <% end %>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
+  <h3 class="id_toupetext" style="text-align:center;">Friends</h3>
+  <ul class="nav nav-sidebar">
+    <% @users.each_with_index do |user, index| %>
+      <li class="recently-chatted"><%= user.first_name + " " + user.last_name %></li>
+    <% end %>
+    <li class="recently-chatted">Nav item</li>
+    <li class="recently-chatted">Nav item again</li>
+    <li class="recently-chatted">One more nav</li>
+    <li class="recently-chatted">Another nav item</li>
+    <li class="recently-chatted">More navigation</li>
+  </ul>
+  <div class="row" style="height:100%;">
+
+  </div>
 </div>
