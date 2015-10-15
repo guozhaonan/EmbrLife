@@ -1,20 +1,36 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
+<p style="text-align:right;"><%= link_to 'Edit', edit_idea_path(@idea) %> | <%= link_to 'Back', ideas_path %></p>
+<p id="notice"><%= notice %></p>
 
-
-  <h1><%= @idea.name %></h3>
-  <div><%= image_tag @idea.image.url(:medium) %></div>
-
-  <h3 class="formheading">The Idea:</h3>
-  <p><%= @idea.description %></p>
-
-  <h3 class="formheading">Our Story</h3>
-  <p><%= @idea.story %></p>
-  <br>
-  <%= render @idea.comments %>
-  <%= render "comments/new" %>
-  <p><%= link_to 'Edit', edit_idea_path(@idea) %> | <%= link_to 'Back', ideas_path %></p>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+    <h1 class="id_orangetext"><%= @idea.name %></h3>
+    <div><%= image_tag @idea.image.url(:medium) %></div>
+  </div>
 </div>
-<div class="bki" style="background-image:url(@idea.image);">
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+    <h3 class="id_orangetext">The Idea</h3>
+    <p class="id_toupetext"><%= @idea.description %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+    <h3 class="id_orangetext">Our Story</h3>
+    <p class="id_toupetext"><%= @idea.story %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-1 col-sm-10 col-sm-offset-1">
+    <h3 class="id_orangetext">Comments</h3>
+  </div>
+</div>
+
+<%= render @idea.comments %>
+<%= render "comments/new" %>
+
+<div class="row"style="height:50px;">
 
 </div>

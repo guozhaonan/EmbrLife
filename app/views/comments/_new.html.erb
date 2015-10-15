@@ -1,8 +1,12 @@
-<%= form_for ([@idea, @idea.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.text_field :comment_text , :class => 'textbox', :placeholder => 'Comment here...' %>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+    <%= form_for ([@idea, @idea.comments.build]) do |f| %>
+      <div class="field col-md-11" style="padding:0px;">
+        <%= f.text_field :comment_text , :class => 'textbox', :placeholder => 'Comment here...' %>
+      </div>
+      <div class="actions col-md-1" style="padding:0px;">
+        <%= f.submit "Post", :class => 'submit' %>
+      </div>
+    <% end %>
   </div>
-  <div class="actions">
-    <%= f.submit "Post", :class => 'submit' %>
-  </div>
-<% end %>
+</div>

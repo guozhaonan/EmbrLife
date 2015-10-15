@@ -1,2 +1,8 @@
-<p><%= comment.user.first_name %> <%= comment.user.last_name %></p>
-<p><%= comment.comment_text %></p>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+    <div class="thumbnail comment">
+      <h5 class = "id_dcyantext"><%= comment.user.first_name %> <%= comment.user.last_name %></h5>
+      <p><%= comment.comment_text %></p>
+    </div>
+  </div>
+</div>
