@@ -11,6 +11,8 @@
   <h3 class="formheading">Our Story</h3>
   <p><%= @idea.story %></p>
   <br>
+  <%= render @idea.comments %>
+  <%= render "comments/new" %>
   <p><%= link_to 'Edit', edit_idea_path(@idea) %> | <%= link_to 'Back', ideas_path %></p>
 </div>
 <div class="bki" style="background-image:url(@idea.image);">

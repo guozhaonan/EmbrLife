@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :friendships
-  resources :ideas
+  
+  resources :ideas do
+    resources :comments
+  end
 
   resources :conversations do
     resources :messages
@@ -9,7 +12,6 @@ Rails.application.routes.draw do
   devise_for :admins
 
   devise_for :users
-
 
   root 'pages#home'
   get 'pages/about'

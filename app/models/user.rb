@@ -19,6 +19,9 @@ class User < ActiveRecord::Base
   has_many :conversations, :foreign_key => :sender_id
   after_create :create_default_conversation
 
+  # OTM relationship with comments  
+  has_many :comments
+
   private
 
   # for demo purposes

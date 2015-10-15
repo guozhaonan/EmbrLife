@@ -14,6 +14,7 @@ class IdeasController < ApplicationController
   # GET /ideas/1.json
   def show
     #Follow Logic
+    @comment = Comment.new
   end
 
   # GET /ideas/new
