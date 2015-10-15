@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :friendships
-  
+
   resources :ideas do
     resources :comments
   end
