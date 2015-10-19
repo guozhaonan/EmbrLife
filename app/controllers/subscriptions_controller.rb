@@ -1,12 +1,11 @@
-class FriendshipsController < ApplicationController
+class SubscriptionsController < ApplicationController
   before_action :authenticate_user!
-
   def create
-    @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
+    @subscription = current_user.subscriptions.build(:idea_id => params[:idea_id])
 
     respond_to do |format|
-      if @friendship.save
-        format.html { redirect_to users_path, notice: 'Added Friend' }
+      if @subscription.save
+        format.html { redirect_to users_path, notice: 'Added Subscription' }
         else
         format.html { render :new }
       end
@@ -14,22 +13,24 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = current_user.friendships.find(params[:id])
-    @friendship.destroy
+    @subscription = current_user.subscriptions.find(params[:id])
+    @subscription.destroy
     respond_to do |format|
       #Fix this line (Redirects to Home but it'd be nice to redirect back to user)
-      format.html { redirect_to root_path, notice: 'Friendship was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Subscription was successfully destroyed.' }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_friendship
-      @friendship = Friendship.find(params[:id])
+      @subscription = Subscription.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def friendship_params
+    def subscription_params
       params.require(:friendship).permit(:user_id, :friend_id)
     end
+end
+
 end

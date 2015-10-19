@@ -1,6 +1,7 @@
 class Idea < ActiveRecord::Base
-  # MTM relationship with users
-  has_and_belongs_to_many :users, :dependent => :destroy
+
+  has_many :subscriptions, :dependent => :destroy
+  belongs_to :author, :class_name => "User"
 
   # images
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }

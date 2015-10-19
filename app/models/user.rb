@@ -4,8 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  #creates relationship between ideas
-  has_and_belongs_to_many :ideas, :dependent => :destroy
+  #creates relationship between ideas and users
+  has_many :ideas, :through => :subscriptions
+
 
   #creates self referential relationships
   has_many :friendships
@@ -16,6 +17,7 @@ class User < ActiveRecord::Base
 
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 
+  #Creates Messaging Functionality
   has_many :conversations, :foreign_key => :sender_id
   after_create :create_default_conversation
 

@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20151014162312) do
+=======
+ActiveRecord::Schema.define(version: 20151015001213) do
+>>>>>>> Stashed changes
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
@@ -82,11 +86,6 @@ ActiveRecord::Schema.define(version: 20151014162312) do
   add_index "ideas_users", ["idea_id"], name: "index_ideas_users_on_idea_id"
   add_index "ideas_users", ["user_id"], name: "index_ideas_users_on_user_id"
 
-  create_table "lightbulbs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "conversation_id"
@@ -97,6 +96,13 @@ ActiveRecord::Schema.define(version: 20151014162312) do
 
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "idea_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
