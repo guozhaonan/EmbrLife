@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   #creates relationship between ideas and users
+  has_many :subscriptions 
   has_many :ideas, :through => :subscriptions
 
 
@@ -21,7 +22,7 @@ class User < ActiveRecord::Base
   has_many :conversations, :foreign_key => :sender_id
   after_create :create_default_conversation
 
-  # OTM relationship with comments  
+  # OTM relationship with comments
   has_many :comments
 
   private

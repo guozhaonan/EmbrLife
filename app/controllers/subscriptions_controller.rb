@@ -1,8 +1,8 @@
 class SubscriptionsController < ApplicationController
   before_action :authenticate_user!
+
   def create
     @subscription = current_user.subscriptions.build(:idea_id => params[:idea_id])
-
     respond_to do |format|
       if @subscription.save
         format.html { redirect_to users_path, notice: 'Added Subscription' }
@@ -31,6 +31,4 @@ class SubscriptionsController < ApplicationController
     def subscription_params
       params.require(:friendship).permit(:user_id, :friend_id)
     end
-end
-
 end

@@ -12,6 +12,7 @@
         <div class="" style="padding:20px;">
           <h4><%= idea.user_id %></h4>
           <p><%= idea.tagline %></p>
+          <%= link_to "Subscribe To Idea", subscriptions_path(:idea_id => idea), :method => :post %>
           <% if idea.user_id == current_user %>
           <p>
             <%= link_to 'Edit', edit_idea_path(idea), class: "btn btn-primary" %>
