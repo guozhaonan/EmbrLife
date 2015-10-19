@@ -73,6 +73,12 @@
         <%end%>
       </div>
       <div class="thumbnail">
+        <h3>Friends</h3>
+        <% @user.friendships.each do |f| %>
+          <%= link_to user_path(f.friend.username) do %><p class="id_dcyantext"><%= f.friend.first_name %> <%= f.friend.last_name %></p><% end %>
+        <% end %>
+      </div>
+      <div class="thumbnail">
         <h3>Recent Activity</h3>
         <% @user.comments.each do |c| %>
           <p><%=link_to idea_path(c.idea.id) do %><span class="id_dcyantext"><%= c.idea.name %></span><% end %>: <%= c.comment_text %></p>
