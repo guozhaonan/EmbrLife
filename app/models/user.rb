@@ -5,8 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   #creates relationship between ideas and users
-  has_many :subscriptions 
-  has_many :ideas, :through => :subscriptions
+  has_many :ideas
+  has_many :subscriptions
+
 
 
   #creates self referential relationships

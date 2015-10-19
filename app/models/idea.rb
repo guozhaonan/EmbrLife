@@ -1,7 +1,5 @@
 class Idea < ActiveRecord::Base
-
-  has_many :subscriptions, :dependent => :destroy
-  belongs_to :author, :class_name => "User"
+  belongs_to :user
 
   # images
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
