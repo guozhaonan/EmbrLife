@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
+
   resources :friendships
-<<<<<<< Updated upstream
 
   resources :ideas do
     resources :comments
   end
-=======
-  resources :ideas
+
   resources :subscriptions
->>>>>>> Stashed changes
+
 
   resources :conversations do
     resources :messages
