@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20151014162312) do
-=======
-ActiveRecord::Schema.define(version: 20151015001213) do
->>>>>>> Stashed changes
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
