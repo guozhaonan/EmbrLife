@@ -73,7 +73,10 @@
         <%end%>
       </div>
       <div class="thumbnail">
-        USER FEED
+        <h3>Recent Activity</h3>
+        <% @user.comments.each do |c| %>
+          <p><%=link_to idea_path(c.idea.id) do %><span class="id_dcyantext"><%= c.idea.name %></span><% end %>: <%= c.comment_text %></p>
+        <% end %>
       </div>
     </div>
   </div>

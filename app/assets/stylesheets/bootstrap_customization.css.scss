@@ -363,20 +363,22 @@ label:focus {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom:0px;
-}
-.nav_item:hover{
-  border-left: 3px solid #F5A503;
-  background-color: rgba(54, 177, 191, 1);
-}
-a{
   color: #E9F1DF;
   text-decoration: none;
 }
-a:hover{
+.nav_item:hover{
   color: #E9F1DF;
+  border-left: 3px solid #F5A503;
+  background-color: rgba(54, 177, 191, 1);
   text-decoration: none;
 }
 
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
 .recently-chatted{
   padding: 10px;
   padding-left: 30px;
