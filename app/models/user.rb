@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
 
   #creates relationship between ideas and users
   has_many :ideas
+  #Creates Relationships for subscriptions to ideas
   has_many :subscriptions
-
 
 
   #creates self referential relationships

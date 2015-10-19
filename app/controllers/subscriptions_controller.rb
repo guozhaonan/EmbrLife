@@ -5,7 +5,7 @@ class SubscriptionsController < ApplicationController
     @subscription = current_user.subscriptions.build(:idea_id => params[:idea_id])
     respond_to do |format|
       if @subscription.save
-        format.html { redirect_to users_path, notice: 'Added Subscription' }
+        format.html { redirect_to ideas_path, notice: 'Added Subscription' }
         else
         format.html { render :new }
       end
@@ -23,12 +23,12 @@ class SubscriptionsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_friendship
+    def set_subscription
       @subscription = Subscription.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscription_params
-      params.require(:friendship).permit(:user_id, :friend_id)
+      params.require(:subscription).permit(:idea_id).merge(user_id: current_user.id)
     end
 end
