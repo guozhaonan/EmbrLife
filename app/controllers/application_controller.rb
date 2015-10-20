@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   protected
-  
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :username
     devise_parameter_sanitizer.for(:account_update) << :username
@@ -17,6 +17,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :college
     devise_parameter_sanitizer.for(:sign_up) << :bio
     devise_parameter_sanitizer.for(:account_update) << :bio
+    devise_parameter_sanitizer.for(:sign_up) << :year
+    devise_parameter_sanitizer.for(:account_update) << :year
     devise_parameter_sanitizer.for(:sign_up) << :values
     devise_parameter_sanitizer.for(:account_update) << :values
     devise_parameter_sanitizer.for(:sign_up) << :interests

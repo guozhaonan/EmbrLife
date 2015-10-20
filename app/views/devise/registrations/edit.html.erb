@@ -23,6 +23,9 @@
         <%= f.text_field :bio, autofocus: true, :class => 'textbox', :placeholder => 'Tell us your story...'%>
       </div>
       <div class = "field">
+        <%= f.select(:year, options_for_select([['Freshman', 1], ['Sophomore', 2], ['Junior', 3], ['Senior', 4], ['Alumni', 5], ['Other', 6]])) %>
+      </div>
+      <div class = "field">
         <%= f.text_field :values, autofocus: true, :class => 'textbox', :placeholder => 'What are your values?'%>
       </div>
       <div class = "field">
