@@ -26,6 +26,9 @@ class User < ActiveRecord::Base
   # OTM relationship with comments
   has_many :comments
 
+  #Notification Relationship
+  has_many :notifications
+
   private
 
   # for demo purposes
