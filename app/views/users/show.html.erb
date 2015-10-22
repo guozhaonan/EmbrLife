@@ -75,7 +75,10 @@
       <div class="thumbnail">
         <h3>Friends</h3>
         <% @user.friendships.each do |f| %>
-          <%= link_to user_path(f.friend.username) do %><p class="id_dcyantext"><%= f.friend.first_name %> <%= f.friend.last_name %></p><% end %>
+          <%= link_to user_path(f.friend.username) do %><p class="id_dcyantext"><%= f.friend.first_name %> <%= f.friend.last_name %><% end %>
+          <% if user_signed_in? %>
+            <%= link_to "#", class: "start-conversation", "data-sid" => current_user.id, "data-rip" => f.friend.id do %>Send Message</p><% end %>
+          <% end %>
         <% end %>
       </div>
       <div class="thumbnail">
