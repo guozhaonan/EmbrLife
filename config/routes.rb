@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :activiites
+
+  resources :notifications
+
   resources :subscriptions
 
 

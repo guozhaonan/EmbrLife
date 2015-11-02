@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
 
   #Notification Relationship
   has_many :notifications
+  has_many :activities
 
   private
 

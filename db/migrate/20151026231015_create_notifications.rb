@@ -1,6 +1,9 @@
 class CreateNotifications < ActiveRecord::Migration
   def change
     create_table :notifications do |t|
+      t.integer :user_id
+      t.integer :activity_id
+      t.boolean :read
 
       t.timestamps null: false
     end

@@ -2,10 +2,6 @@
 
 one:
   user_id: 1
-  activity_id: 1
-  read: false
 
 two:
   user_id: 1
-  activity_id: 1
-  read: false
